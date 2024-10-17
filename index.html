@@ -138,6 +138,50 @@ footer {
     color: #f7f7f5;
     text-decoration: none;
 }
+
+ /* Styles de l'icône hamburger */
+ .menu-icon {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+
+
+  /* Menu responsive pour petits écrans */
+  @media (max-width: 768px) {
+            .menu-icon {
+                display: flex;
+            }
+
+            /* Cacher les liens par défaut */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                padding: 10px;
+                z-index: 10;
+            }
+
+            /* Afficher les liens quand l'icône est cliquée */
+            .menu-icon:active + .nav-links,
+            .menu-icon:hover + .nav-links {
+                display: flex;
+            }
+        }
+
     </style>
 
 </head>
@@ -147,12 +191,21 @@ footer {
         <div class="image4d">
             <h1><i>Bloom-bakery</i></h1>
         </div>
-        <nav>
+        <nav class="nav">
+             <!-- Icône hamburger -->
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+             <!-- Liens de navigation -->
+        <div class="nav-links">
             <a href="#">Home</a>
             <a href="Aboutus.html">About us</a>
             <a href="galery.html">Menu</a>
             <a href="signup2.html">Shop</a>
             <a href="contact.html">Contact</a>
+        </div>
         </nav>
     </header>
 
