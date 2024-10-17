@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            background-color: #fff;
+            width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background: url(./crepes12.jpg);
+            padding: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #070707;
+        }
+
+        .sidebar li.active {
+            color: #000;
+
+        }
+
+        .form-content {
+            padding: 40px;
+            flex: 1;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #aa0f5d;
+            color: rgb(193, 171, 181);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #b02f6f;
+        }
+    </style>
+</head>
+
+<body background="crepes4.jpg">
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+
+                <li class="active">
+                <li>1. One choice</li>
+                <li>2. One information</li>
+                <li>3. Manyr orde</li>
+                <li>4. The delivery</li>
+                </li>
+            </ul>
+        </div>
+        <div class="form-content">
+            <h2>Business crepes</h2>
+            <p>Take less than 10 minutes to fill out the information needed to register your order</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms of Service.</label>
+                </div>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teahouse - Sweet Crepes</title>
+    <script>
+function scrollToProducts() {
+    const productsSection = document.getElementById('products');
+    productsSection.scrollIntoView({ behavior: 'smooth' });
+}
+    </script>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7dce4;
+    color: #020202;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #050505;
+    font-weight: bold;
+    
+}
+nav a:hover{
+    background-color: rgb(231, 136, 188);
+    padding: 40px;
+}
+
+.hero {
+    background-image: url('./cake.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #0f0e0f;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #b44c3c;
+    color: rgb(254, 253, 253);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.products {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.products h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.product-item h4 {
+    margin: 10px 0;
+}
+
+.product-item span {
+    color: #d00991;
+    font-weight: bold;
+}
+
+.reviews {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f6f8f2;
+}
+
+.reviews h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+footer {
+    padding: 20px;
+    background-color: #d76d9b;
+    color: rgb(16, 15, 15);
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #f7f7f5;
+    text-decoration: none;
+}
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="image4d">
+            <h1><i>Bloom-bakery</i></h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="galery.html">Menu</a>
+            <a href="signup2.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to my bakery</h2>
+        <p>Discover the finest teas and sweets just for you.</p>
+        <button onclick="scrollToProducts()">Explore Products</button>
+    </section>
+
+    <section class="products" id="products">
+        <h3>Ours baby</h3>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="cake2.jpg" alt="" style="width:110px;">
+                <h4>Sweety bakeries</h4>
+                <p>Refreshing and energizing mint crepes.</p>
+                <span>$1.5-100</span>
+            </div>
+            <div class="product-item">
+                <img src="crepes3.jpg" alt="Cherry Doom"style="width: 110px;;">
+                <h4>Bloom cocktail cakes</h4>
+                <p>A touch of in your cocktail.</p>
+                <span>$1.5-10 </span>
+            </div>
+            <div class="product-item"> 
+                <img src="home.jpg" alt="Bamboo Leaf Green"style="width:100px">
+                <h4>Amazonia</h4>
+                <p>We have many service for your different event</p>
+                <span>$50-250</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h3>What Our Customers Say</h3>
+        <p>"The best bakery experience I have ever had!" - Jane Doe</p>
+    </section>
+
+    <footer>
+        <p>Connect with us on social media:</p>
+        <div class="social-links">  
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 Teahouse. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <script>
+        document.querySelector(".btn").addEventListener("click", function() {
+    alert("Thank you for contacting us!");
+});
+    </script>
+    <style>
+       
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: rgb(251, 248, 248);
+}
+
+header {
+    padding: 20px;
+    background-color: rgb(216, 113, 159);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(248, 244, 244);
+}
+
+.contact-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: rgb(244, 241, 241);
+    text-decoration: none;
+}
+
+.about-header {
+    background: url('crepes9.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.skills {
+    background-color: #222;
+    padding: 50px;
+    text-align: center;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 60%;
+    background-color: #555;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress {
+    background-color: #00bcd4;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.hire-us {
+    text-align: center;
+    padding: 100px;
+    background: url('crepe2.jpg') no-repeat center center/cover;
+}
+
+footer {
+    background-color: #111;
+    padding: 50px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.social-media a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Pages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-header">
+            <h1>About Us</h1>
+            <p>Home</p>
+        </section>
+
+        <section class="about-content">
+            <div class="about-text">
+                <h2>We Always Make The Best for you</h2>
+                <p>Crêpe's beautiful and unique look comes from its weaving method, which creates a rippling texture. The finished fabric has a wrinkled and bumpy appearance.</p>
+            </div>
+            <div class="about-image">
+                <img src="cake2.jpg"style="width: 300px;">
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Our Skills</h2>
+            <p>Crêpe's beautiful and unique look comes from its weaving method, which creates a rippling texture. The finished fabric has a wrinkled and bumpy appearance.</p>
+            <div class="skill">
+                <p>Cake</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+                <p>85%</p>
+            </div>
+            <div class="skill">
+                <p>Cocktail</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                <p>90%</p>
+            </div>
+            <div class="skill">
+                <p>Event</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 77%;"></div>
+                </div>
+                <p>85%</p>
+            </div>
+        </section>
+
+        <section class="hire-us">
+            <h2>We Are Always Ready To Take A Perfect Shot</h2>
+            <a href="#" class="btn">Get Started</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <p>Bloom-bakery</p>
+                <p>Crêpe's beautiful and unique look comes from its weaving method, which creates a rippling texture. The finished fabric has a wrinkled and bumpy appearance.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <p>Rwanda,Kigali, Kimironko st12</p>
+                <p>+250 309 637 199</p>
+                <p>Bloombakery@yourdomain.tld</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2023 vigraph | Powered by vigraph</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

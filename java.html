@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image4/jpg" href="image4.jpg" />
+    <title>Javascript</title>
+    <script>
+        function greetings() {
+            alert("good morning.");
+        }
+
+        function confirmation() {
+            var x = confirm("do you want to proceed");
+            if (x == true) {
+                document.write("you clicked the ok button on confirm");
+            }
+            else {
+                document.write("you cancelled")
+            }
+        }
+        function getname()
+        {
+            var y=prompt("what is your name","monica");
+        }
+        
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <h1></h1>
+
+    <button onclick="confirmation()">display</button>
+
+    <button onclick="confirmation()">ok</button>
+
+    <button onclick="greetings()">greet me</button>
+
+
+    <!--<button onmouseenter="greetings()">greet me</button>-->
+    <h1 id="head1">this page it home</h1>
+
+    <h2 id="head2"></h2>
+    <p>On the Insert tab, the galleries include items that are designed to coordinate with the
+        overall look of your document. You can use these galleries to insert tables, headers, footers,
+        lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams,
+        they also coordinate with your current document look.
+    </p>
+    <script>
+        var n = document.getElementById("head2");
+        var m = document.getElementById("head1");
+        n.innerHTML = "hello world!";
+        m.innerHTML = "introduction to java";
+        n.style.color = "red";
+        n.style.background = "blue";
+
+
+        // document.getElementById("head2").innerHTML="Hello world!";
+        //document.getElementById("head2").innerHTML="Introductiont to javascript";
+
+
+        // document.write("hello javasript!");
+        // document.write ("<h3> the learning is here </h3>");
+
+        //alert("Welcome to my page");
+        //confirm("do yo want to process");
+        //prompt("what is your name?","Monica");
+        var x = 10;
+        var m = 20;
+        var sum = x + m;
+        document.write("the summation is" + sum);
+
+    </script>
+
+</body>
+
+</html>

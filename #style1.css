@@ -1,0 +1,21 @@
+img {
+    width: 70px;
+    display:;
+
+}
+#nav
+{
+    display:flex;
+    gap: 10px;
+}
+@media screen and (max-width:650px){
+    #nav {
+        display: block;
+        max-height:0;
+        overflow: hidden;
+        transition: max-heigth 0.3s;
+     }
+     img{
+        display: block;
+     }
+}
