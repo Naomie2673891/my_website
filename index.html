@@ -9,6 +9,11 @@
             const productsSection = document.getElementById('products');
             productsSection.scrollIntoView({ behavior: 'smooth' });
         }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
     <style>
         * {
@@ -35,15 +40,14 @@
 
         .image4d {
             display: flex;
-            align-items: center; /* Aligne le logo et le texte verticalement */
-            gap: 10px; /* Espacement entre le logo et le texte */
+            align-items: center;
+            gap: 10px;
         }
 
         #logo {
-            width: 70px; /* Taille du logo (ajuster selon les besoins) */
+            width: 70px;
             height: auto;
             border-radius: 60%;
-
         }
 
         .image4d h1 {
@@ -115,6 +119,8 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .product-item {
@@ -124,6 +130,12 @@
             border-radius: 8px;
             text-align: center;
             width: 200px;
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
         }
 
         .product-item h4 {
@@ -160,7 +172,7 @@
             text-decoration: none;
         }
 
-        /* Styles de l'icône hamburger */
+        /* Styles for hamburger menu */
         .menu-icon {
             display: none;
             cursor: pointer;
@@ -175,29 +187,73 @@
             margin: 5px 0;
         }
 
-        /* Menu responsive pour petits écrans */
+        /* Responsive navigation */
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Toggle display of nav links in mobile view */
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            z-index: 10;
+        }
+
         @media (max-width: 768px) {
             .menu-icon {
                 display: flex;
             }
 
-            /* Cacher les liens par défaut */
             .nav-links {
                 display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                right: 10px;
-                background-color: #f9f9f9;
-                border: 1px solid #ddd;
-                padding: 10px;
-                z-index: 10;
             }
 
-            /* Afficher les liens quand l'icône est cliquée */
-            .menu-icon:active + .nav-links,
-            .menu-icon:hover + .nav-links {
+            .nav-links.active {
                 display: flex;
+            }
+
+            .nav-links a {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .product-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-item {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .hero button {
+                font-size: 0.9em;
+                padding: 8px 18px;
             }
         }
     </style>
@@ -209,13 +265,11 @@
             <h1><i>Bloom-bakery</i></h1>
         </div>
         <nav class="nav">
-            <!-- Icône hamburger -->
-            <div class="menu-icon">
+            <div class="menu-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <!-- Liens de navigation -->
             <div class="nav-links">
                 <a href="#">Home</a>
                 <a href="Aboutus.html">About us</a>
@@ -236,7 +290,7 @@
         <h3>Ours baby</h3>
         <div class="product-list">
             <div class="product-item">
-                <img src="cake2.jpg" alt="" style="width:110px;">
+                <img src="cake2.jpg" alt="Mint Crepes" style="width:110px;">
                 <h4>Sweety bakeries</h4>
                 <p>Refreshing and energizing mint crepes.</p>
                 <span>$1.5-100</span>
@@ -244,13 +298,13 @@
             <div class="product-item">
                 <img src="crepes3.jpg" alt="Cherry Doom" style="width: 110px;">
                 <h4>Bloom cocktail cakes</h4>
-                <p>A touch of in your cocktail.</p>
-                <span>$1.5-10 </span>
+                <p>A touch of flavor in your cocktail.</p>
+                <span>$1.5-10</span>
             </div>
             <div class="product-item">
-                <img src="home.jpg" alt="Bamboo Leaf Green" style="width:100px">
+                <img src="home.jpg" alt="Bamboo Leaf Green" style="width:100px;">
                 <h4>Amazonia</h4>
-                <p>We have many service for your different event</p>
+                <p>We have services for your events.</p>
                 <span>$50-250</span>
             </div>
         </div>
